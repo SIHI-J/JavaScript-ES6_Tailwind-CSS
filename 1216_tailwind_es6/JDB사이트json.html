@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02_tailwindcss_반응형 그리드 레이아웃</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    body * {
+      font-family: "맑은 고딕";
+    }
+  </style>
+</head>
+
+<body class="">
+  <h2>02_tailwindcss_반응형 그리드 레이아웃</h2>
+  <section class="max-w-full mx-14 px-4 py-10">
+    <h2 class="mb-8 text-8xl font-black">ARTIST</h2>
+    <a href="https://jdbent.co.kr/" title="" class="mb-8 font-bold text-base border-b-2 pb-1 inline-block">전체</a>
+    <!-- 그리드 레이아웃 -->
+    <article id="gallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-8">
+      <!-- 추가될 데이터 목록 내용 추가 메서드 append() -->
+    </article>
+  </section>
+  <!-- 제이쿼리 라이브러리 연결 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      //비동기 ajax문법을 활용하여 json데이터를 불러와 내용을 추가한다.
+      $.ajax({
+        /*url:'주소나 불러올 데이터 파일',
+        type:'불러올 방식',
+        dataType:'데이터 형식',
+        success: function(result){*/
+        url: './script/data.json',
+        type: 'post',
+        dataType: 'json',
+        success: function (result) {
+          //데이터 통신 성공시 실행할 내용
+          let t = "";
+          $.each(result.product, function (i, e) {
+            t += "<div class='bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition relative'><img class='w-full object-cover hover:scale-105 transition duration-300' src='" + e.path + "'alt=''><div class='w-full px-4 py-8 bottom-0 absolute bg-zinc-700/40 backdrop-blur'><h2 class='text-white font-semibold text-lg'>" + e.tit + "</h2><p class='text-gray-200 text-sm'>" + e.txt + "</p><a href='#' title='프로필 상세보기'><img class='ml-auto block' src='./images/link_arrow.svg' alt=''></a></div></div>";
+          });
+          // 갤러리 박스 안에 맨뒤에 내용 추가
+          $('#gallery').append(t);
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

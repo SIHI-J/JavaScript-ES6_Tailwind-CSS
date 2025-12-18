@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02_자바스크립트 es6 문법_변수 키워드</title>
+</head>
+
+<body>
+  <h2>02_자바스크립트 es6 문법_변수 키워드</h2>
+  <ul>
+    <li>var : variable의 약자로서 자바스크립트 초창기에 사용하던 변수 키워드</li>
+    <li>let : 변수 선언시 let키워드로 선언한 변수는 재선언 할 수 없으며, {}기준으로 전역변수와 지역변수로 나누어진다. (변경이 가능한 값을 저장하고자 할때 사용)</li>
+    <li>const : 변수 선언시 const로 선언한 변수는 블럭범위의 변수 키워드이고, 변수의 값을 변경할 수 없다.(변경이 불가능한 고정된 값을 저장할 경우 사용)</li>
+  </ul>
+  <script>
+    //1. 변수선언
+    //var 변수명 = 값;
+    //let 변수명 = 값;
+    //const 변수명 = 값;
+    var a = 10;
+    //var a = 20;
+    let b = 30; //전역변수
+    //let b = 40; 중복되지않는 값을 선언할때
+    const d = 50;//const 키워드는 변수 선언시 값을 입력해준다. 고정된값 사용
+
+    //const c = 50;
+    //2. 출력하기
+    document.write(a);
+    document.write(b);
+    document.write('<br>');
+    //document.write(c);
+    console.log(a);
+    console.log(b);
+    //console.log(c); //지역변수는 if문 밖에서 출력이 안된다.
+    console.log(d);//한번 담은 데이터를 다른 데이터로 변경해거 담을 시 오류가 생긴다
+    //함수 안에서 변수 키워드 선언하기
+    function test() {
+      let b = 5; //지역변수 - 같은 변수라도 문제가없음(문법은 맞으나 다르게 해주기)
+      console.log(b);
+    };
+    test(); //함수명으로 호출하여 실행하기
+    if (a == 10) { //만약에 a변수에 10을 담는다. 조건식에 맞지 않음
+      let c = 45;//출력을 위한 명령어가 없음
+      c = 60;
+      console.log(c);
+    }
+    const btn = document.getElementById('btn');
+    const e = { //객체(사용자 정의 객체, 내장 객체(date, string, setInterval ....))
+      test01: 10,
+      test02: 'es6문법'
+    }
+    //객체 호출
+    console.log(e.test01); //객체명,속성명
+    console.log(e.test02);
+    //객체 생성하여 속성과 값 입력하기
+    const person = {
+      name: '홍길동',
+      age: '30',
+      region: '서울'
+    }
+    //내용 출력 - 내가 사는 지역은 '서울'이고 나의 이름은 '홍길동', 나이는 '30'살 입니다.
+    //예전 방식 +
+    document.write("내가 사는 지역은 '" + person.region + "'이고 나의 이름은 '" + person.name + "', 나이는 '" + person.age + "세' 입니다. <br>");
+    document.write(`내가 사는 지역은 '${person.region}'이고 나의 이름은 '${person.name}', 나이는 '${person.age}세' 입니다.`) //es6문법에서 새롭게 나온``백캠문자를 사용해 객체를 ${}기호로 묶어주고 문자열을 입력한다
+    //배열 객체의 선언과 값 할당하기
+    const f = [10, 20, 30]; //배열 객체의 선언과 값 할당하기
+
+    //배열객체 내용 출력하기
+    console.log(f); // 값 전체 출력하기
+    console.log(f[0]); //n번째 값 출력하기
+    console.log(f[1]);
+    console.log(f[2]);
+    console.log(f.length); //배열 개수 출력하기
+    f[0] = 100;
+    console.log(f[0]);
+    const info = ['admin', '1234', '관리자', '020000000', '서울시 종로구 구기동', 'admin.naver.com']
+    info[1] = '4321';
+    console.log(info);
+    //반복문을 사용하여 값 풀력하기 
+    //for, while, do while, for each...
+    let i = 10; //초기값
+    for (let i = 0; i < 5; i++) { //초기값;조건식;증감식
+      console.log(i);
+    }
+    console.log(i); //초기값 = 10, 반복문은 그안에서만 출력됨
+    //위 두개의 i변슈는 지역 변수(for문 안에 있는거)/전역변수(for문 밖에 있는거)의 차이때문에 오류가 나지 않는다
+
+  </script>
+</body>
+
+</html>

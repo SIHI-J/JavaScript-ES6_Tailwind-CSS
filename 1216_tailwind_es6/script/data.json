@@ -1,0 +1,44 @@
+{
+  "product": [
+    {
+      "path": "./images/jdb1.jpg",
+      "tit": "유민상",
+      "txt": "KBS 공채 20기 코미디언"
+    },
+    {
+      "path": "./images/jdb2.jpg",
+      "tit": "김지민",
+      "txt": "KBS 공채 21기 코미디언"
+    },
+    {
+      "path": "./images/jdb3.jpg",
+      "tit": "홍인규",
+      "txt": "KBS 공채 19기 코미디언"
+    },
+    {
+      "path": "./images/jdb4.jpg",
+      "tit": "홍윤화",
+      "txt": "2006년 SBS 특채 코미디언"
+    },
+    {
+      "path": "./images/jdb5.jpg",
+      "tit": "김민경",
+      "txt": "KBS 공채 23기 코미디언"
+    },
+    {
+      "path": "./images/jdb6.jpg",
+      "tit": "김대희",
+      "txt": "KBS 공채 14기 코미디언"
+    },
+    {
+      "path": "./images/jdb7.jpg",
+      "tit": "박소영",
+      "txt": "KBS 공채 24기 코미디언"
+    },
+    {
+      "path": "./images/jdb8.jpg",
+      "tit": "김준호",
+      "txt": "KBS 공채 5기 코미디언"
+    }
+  ]
+}

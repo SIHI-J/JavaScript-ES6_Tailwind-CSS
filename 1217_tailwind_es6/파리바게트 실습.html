@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>파리바게트</title>
+  <!-- tailwind css 라이브러리 주소 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    .scroll-x {
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .scroll-x::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <div class="max-w-full mx-20 px-4 py-10">
+      <div class="flex justify-between my-10">
+        <h2 class="text-3xl font-extrabold">PROMOTION</h2>
+        <a class="font-bold text-base underline pb-1 inline-block" href="">SHOW MORE</a>
+      </div>
+      <div class="flex justify-center relative">
+        <button id="prevBtn" class="absolute left-0 top-1/2 -translate-y-3/4 z-10 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-18">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+          </svg>
+        </button>
+        <div class="overflow-hidden w-full">
+          <div id="sliders" class="flex transition-transform duration-500 scroll-x ease-in-out">
+            <div class="slide relative shrink-0 px-2 w-full sm:w-1/2 lg:w-1/4">
+              <span class="bg-blue-900 text-white px-2 py-1 text-sm absolute">진행중</span>
+              <img class="w-full" src="./images/promo1.jpg" alt="프로모션 이미지">
+              <div class="">
+                <h3>💙베리밤❤ 고블린잔 세트🍷 9,900원</h3>
+                <a class="text-zinc-400" href="#" title="더보기">READ MORE</a>
+              </div>
+            </div>
+            <div class="slide relative shrink-0 px-2 w-full sm:w-1/2 lg:w-1/4">
+              <span class="bg-blue-900 text-white px-2 py-1 text-sm absolute">진행중</span>
+              <img class="w-full" src="./images/promo2.jpg" alt="프로모션 이미지">
+              <div class="">
+                <h3>동반성장 개방형 플랫폼 ‘상생누리’ 2025</h3>
+                <a class="text-zinc-400" href="#" title="더보기">READ MORE</a>
+              </div>
+            </div>
+            <div class="slide relative shrink-0 px-2 w-full sm:w-1/2 lg:w-1/4">
+              <span class="bg-blue-900 text-white px-2 py-1 text-sm absolute">진행중</span>
+              <img class="w-full" src="./images/promo3.jpg" alt="프로모션 이미지">
+              <div class="">
+                <h3>호두파운드 구매 시, 🐝우리벌꿀카스테라🍯 증정!</h3>
+                <a class="text-zinc-400" href="#" title="더보기">READ MORE</a>
+              </div>
+            </div>
+            <div class="slide relative shrink-0 px-2 w-full sm:w-1/2 lg:w-1/4">
+              <span class="bg-blue-900 text-white px-2 py-1 text-sm absolute">진행중</span>
+              <img class="w-full" src="./images/promo4.jpg" alt="프로모션 이미지">
+              <div class="">
+                <h3>베리밤 케이크 3종 출시 사전예약 혜택 🍓🍰</h3>
+                <a class="text-zinc-400" href="#" title="더보기">READ MORE</a>
+              </div>
+            </div>
+            <div class="slide relative shrink-0 px-2 w-full sm:w-1/2 lg:w-1/4">
+              <span class="bg-blue-900 text-white px-2 py-1 text-sm absolute">진행중</span>
+              <img class="w-full" src="./images/promo5.jpg" alt="프로모션 이미지">
+              <div class="">
+                <h3>홀리데이 케이크 사전예약, 최대 30% 혜택 💙</h3>
+                <a class="text-zinc-400" href="#" title="더보기">READ MORE</a>
+              </div>
+            </div>
+            <div class="slide relative shrink-0 px-2 w-full sm:w-1/2 lg:w-1/4">
+              <span class="bg-blue-900 text-white px-2 py-1 text-sm absolute">진행중</span>
+              <img class="w-full" src="./images/promo6.jpg" alt="프로모션 이미지">
+              <div class="">
+                <h3>딸기일까? 케이크일까?🍓🍰 풍성한 달콤함이 터지는 베리밤 BERRY BOMB❤️</h3>
+                <a class="text-zinc-400" href="#" title="더보기">READ MORE</a>
+              </div>
+            </div>
+            <div class="slide relative shrink-0 px-2 w-full sm:w-1/2 lg:w-1/4">
+              <span class="bg-blue-900 text-white px-2 py-1 text-sm absolute">진행중</span>
+              <img class="w-full" src="./images/promo7.jpg" alt="프로모션 이미지">
+              <div class="">
+                <h3>💙파란라벨💗 런치보냉백 매/장/판/매 ☺️</h3>
+                <a class="text-zinc-400" href="#" title="더보기">READ MORE</a>
+              </div>
+            </div>
+            <div class="slide relative shrink-0 px-2 w-full sm:w-1/2 lg:w-1/4">
+              <span class="bg-blue-900 text-white px-2 py-1 text-sm absolute">진행중</span>
+              <img class="w-full" src="./images/promo8.jpg" alt="프로모션 이미지">
+              <div class="">
+                <h3>🎂더피 케이크🐯 파바에서 만날래?✨</h3>
+                <a class="text-zinc-400" href="#" title="더보기">READ MORE</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="nextBtn" class="absolute right-0 top-1/2 -translate-y-3/4 z-10 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-18">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+  <script>
+    // 요소 가져오기
+    const slider = document.getElementById("sliders"); //슬라이드
+    const slides = slider.children;          // 각 슬라이드
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const autoslider = document.querySelector(".overflow-hidden");
+
+    // 상태 변수
+    let index = 0;           // 현재 슬라이드 인덱스
+    let sliderView = 1;      // 화면에 보이는 슬라이드 개수
+    let autoSlide = null;    // 자동 슬라이드 타이머
+
+    // 화면 크기에 따른 슬라이드 개수
+    function getSlidesView() {
+      if (window.innerWidth >= 1024) return 4;
+      if (window.innerWidth >= 640) return 2;
+      return 1;
+    }
+
+    function appendClones() {
+      // 기존 클론 제거
+      slider.querySelectorAll("[data-clone='1']").forEach(el => el.remove());
+
+      // 현재 "진짜" 슬라이드들만 다시 잡기 (클론 제거 후라 안전)
+      const realSlides = [...slider.querySelectorAll(".slide:not([data-clone='1'])")];
+      const realCount = realSlides.length;
+
+      // 앞에 붙일 클론: 마지막 sliderView개
+      const head = realSlides.slice(realCount - sliderView).map(el => {
+        const c = el.cloneNode(true);
+        c.dataset.clone = "1";
+        return c;
+      });
+
+      // 뒤에 붙일 클론: 처음 sliderView개
+      const tail = realSlides.slice(0, sliderView).map(el => {
+        const c = el.cloneNode(true);
+        c.dataset.clone = "1";
+        return c;
+      });
+
+      // 앞(헤드) → 진짜들 → 뒤(테일)
+      head.forEach(c => slider.insertBefore(c, slider.firstChild));
+      tail.forEach(c => slider.appendChild(c));
+
+      // 시작 위치: 앞에 클론 sliderView개가 있으니 index를 sliderView로 맞춰 시작
+      index = sliderView;
+    }
+    // 반응형에 맞춰 각 슬라이드 폭을 강제로 통일
+    function setSlideWidths() {
+      const widthPercent = 100 / sliderView;
+      [...slides].forEach(slide => {
+        slide.style.width = widthPercent + "%";
+      });
+    }
+
+    function moveSlide() {
+      if (!slides.length) return;
+
+      // % 단위로 이동 
+      const movePercent = index * (100 / sliderView);
+      slider.style.transform = `translateX(-${movePercent}%)`;
+    }
+    // 다음 버튼 
+    nextBtn.addEventListener("click", () => {
+      index++;
+      moveSlide();
+
+      const realSlides = slider.querySelectorAll(".slide:not([data-clone='1'])");
+      const realCount = realSlides.length;
+
+      if (index === sliderView + realCount) {
+        setTimeout(() => {
+          slider.style.transition = "none";
+          index = sliderView; // 진짜 첫 묶음 위치로 순간이동
+          moveSlide();
+          requestAnimationFrame(() => {
+            slider.style.transition = "transform 0.5s ease-in-out";
+          });
+        }, 500);
+      }
+    });
+
+    // 이전 버튼
+    prevBtn.addEventListener("click", () => {
+      index--;
+      moveSlide();
+
+      const realSlides = slider.querySelectorAll(".slide:not([data-clone='1'])");
+      const realCount = realSlides.length;
+
+      // index가 앞 클론 구간으로 넘어가면 (index === 0..)
+      // 진짜 마지막 묶음 위치로 순간이동: index = sliderView + realCount - 1
+      if (index === 0) {
+        setTimeout(() => {
+          slider.style.transition = "none";
+          index = sliderView + realCount - 1;
+          moveSlide();
+          requestAnimationFrame(() => {
+            slider.style.transition = "transform 0.5s ease-in-out";
+          });
+        }, 500);
+      }
+    });
+
+    // 자동 슬라이드 시작 함수
+    function startAutoSlide() {
+      stopAutoSlide(); // 중복 방지
+      autoSlide = setInterval(() => {
+        nextBtn.click();
+      }, 3000);
+    }
+
+    // 자동 슬라이드 정지 함수
+    function stopAutoSlide() {
+      if (autoSlide) {
+        clearInterval(autoSlide);
+        autoSlide = null;
+      }
+    }
+
+    // 마우스 이벤트
+    autoslider.addEventListener("mouseenter", stopAutoSlide);
+    autoslider.addEventListener("mouseleave", startAutoSlide);
+
+    // 리사이즈 대응
+    window.addEventListener("resize", () => {
+      sliderView = getSlidesView();
+      appendClones();
+      setSlideWidths();
+      moveSlide();
+    });
+
+    // 초기 실행
+    sliderView = getSlidesView();
+    appendClones();
+    setSlideWidths();
+    moveSlide();
+    startAutoSlide();
+  </script>
+</body>
+
+</html>

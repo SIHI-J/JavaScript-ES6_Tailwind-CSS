@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>es6문법_02_시간객체(setInterval_setTimeOut)</title>
+</head>
+
+<body>
+  <h2>es6문법_02_시간객체(setInterval_setTimeOut)</h2>
+  <p>날짜와 시간에 관련된 객체명? new Date();</p>
+  <p>시간함수 setTimeOut();</p>
+
+  <h3>실시간 디지털 시계</h3>
+  <div id="clock" style="color: crimson; font-size: 30px;">
+
+  </div>
+  <h3>D-day값 설정하기</h3>
+
+  <p>사용자가 설정한 날짜에 맞추어 현재 날짜를 계산하여 남은 일수 구하기</p>
+  <p>시작 날짜 : 2025-08-14, 끝나는 날짜 : 2026-02-20</p>
+  <div id="d_day"></div>
+  <p>월 출력시 0-11까지 이기 때문에 기존값에 1을 더해야함</p>
+  <label for="date">생일 입력하기</label>
+  <input type="date" name="date" id="date">
+  <button id="btn">계산하기</button>
+  <h3>실습하기 - 자신의 태어난 날짜를 기준으로 현재까지 몇일인지 알아보기</h3>
+  <div id="birth"></div>
+  <h3>실습하기 - 내년 생일까지 몇일 남았는지 알아보기</h3>
+  <div id="birthday"></div>
+  <script>
+    // 사용자 정의함수
+    function startTime() {
+      let today = new Date();
+      // document.write(today.getFullYear() + '년 <br>');
+      //document.write(today.getMonth() + 1 + '월 <br>');
+      // document.write(today.getDate() + '일 <br>');
+      let yoil = ['일', '월', '화', '수', '목', '금', '토'];
+      // document.write(today.getDay() + '요일번호 <br>');
+      // document.write(yoil[today.getDay()] + '요일 <br>');
+      let h = today.getHours();
+      let m = today.getMinutes();
+      let s = today.getSeconds() + '.' + today.getMilliseconds();
+      //document.write();
+      //시 분 초 가 한자리수일 경우 숫자 앞에 0을 붙여주기
+      h = checkNum(h);
+      m = checkNum(m);
+      s = checkNum(s);
+      //출력하기
+      document.getElementById('clock').innerHTML = h + ':' + m + ':' + s
+      //함수 반복 호출하여 시간이 흐르는 것 처럼 표시한다.
+      let t = setTimeout(startTime, 100);
+    }
+    startTime();
+    function checkNum(a) {
+      if (a < 10) {
+        a = '0' + a;
+      }
+      return a;
+    }
+    let today = new Date();
+    let day = new Date(2026, 1, 20);
+    let m = today.getMonth() + 1;
+    let gap = day.getTime() - today.getTime();
+    console.log(day);
+    console.log(gap);
+    let res = Math.ceil(gap / (1000 * 60 * 60 * 24));
+    console.log(res);
+    document.getElementById('d_day').innerHTML = 'D-' + res + '입니다.';
+    const birth = new Date(2001, 1, 26);
+    const birthday = new Date(2026, 1, 26);
+
+    const gap1 = today.getTime() - birth.getTime();
+    const days = Math.floor(gap1 / (1000 * 60 * 60 * 24));
+
+    const gap2 = birthday.getTime() - today.getTime();
+    const days2 = Math.ceil(gap2 / (1000 * 60 * 60 * 24));
+
+    document.getElementById('birth').textContent = `${days}일`
+    document.getElementById('birthday').textContent = `${days2}일`
+  </script>
+
+</body>
+
+</html>

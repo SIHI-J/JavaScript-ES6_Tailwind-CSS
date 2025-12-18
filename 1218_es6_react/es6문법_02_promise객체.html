@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>es6문법_02_primise객체</title>
+</head>
+
+<body>
+  <h2>es6문법_02_primise객체</h2>
+  <p>primise객체 - 비동기 작업의 “결과를 약속”하는 객체입니다.</p>
+  <ul>
+    <li>Promise는 Producing code(생성코드)와 Consuming code(소비코드)fmf dusrufgksms javascript객체이다</li>
+    <li>Producing code(생성코드)는 시간이 걸릴 수 있는 코드</li>
+    <li>Consuming code(소비코드)는 결과를 기다려야 하는 코드</li>
+    <li>Promise객체는 Producing code(생성코드)와 Consuming code(소비코드)에 대한 호출이 모두 포함된다.</li>
+    <li>es6문법에서 추가된 객체이다.</li>
+    <li>실행 결과에 대한 '상태정보'를 담고 있으며, 작업의 결과가 promise 객체에 저장되고, promise객체를 통해 작업이 '성공'되었는지 '실패'되었는지를 알 수 있다.</li>
+  </ul>
+  <h3>promise 문법</h3>
+  <pre>
+    let 인스턴트 변수명 = new Promise (function(testResolve, testReject)){
+      //Producing 코드 작성하기
+      testResolve(); //성공을 한 경우 실행
+      testReject(); //에러가 발생한 경우 실행
+    }
+    //Consuming 코드 작성
+    인스턴트 변수명.then(
+      function(value){/*성공을 한 경우 코드*/}
+      function(error){/*에러가 있을 경우 코드*/}
+    )
+  </pre>
+  <h3>promise 객체 속성</h3>
+  <ul>
+    <li>Promise객체는 크게 '보류중', '실행', '거부' 이렇게 사용 할 수 있다.</li>
+    <li>state 또는 result라는 속성을 통해 위 명령을 줄 수 있다.</li>
+    <li>보류중인 동안에는 결과가 정의되지 않는다.</li>
+    <li>실행 되면 결과 값이 출력된다</li>
+    <li>거부되면 결과는 오류객체로 처리 된다</li>
+  </ul>
+  <h3>promise 객체 메서드 = then, catch, finally</h3>
+  <ul>
+    <li>then - promise 객체가 fulfilled(성공 resolve 해서 완료) 상태가 되면 실행할 콜백함수를 등록하는 메서드</li>
+    <li>catch - promise 객체가 rejected(실패) 상태가 되면 콜백함수를 등록하는 메서드</li>
+    <li>finally - 어떤 작업의 성공이나 실패 여부와는 상관없이 항상 실행하고 싶은 콜백함수를 등록하는 메서드</li>
+  </ul>
+  <h3>promise객체를 사용하는 이유</h3>
+  <ul>
+    <li>비동기 작업을 순차적으로 처리하기 위해</li>
+    <li>Promise는 구조사 간단해 반환값을 찾아 사용하기 쉽기때문</li>
+    <li>callback 함수가 많아지면 코드의 가독성이 나빠지는데 이것을 보완하기 위해</li>
+  </ul>
+  <h3>실습1. promise 객체 사용하기</h3>
+  <div id="test" style="background-color: yellow; height: 50px; line-height: 50px;"></div>
+  <script>
+    //변수선언
+    const test = document.getElementById('test');
+    //출력을 위한 함수
+    function output(x) {
+      test.innerHTML = x;
+    }
+    //값을 담아 함수 호출하기
+    let txt = '<strong>안녕하세요</strong>';
+    output(txt);
+
+    // Promise 객체 생성
+    let testPromise = new Promise(function (testResolve, testReject) {
+      let num = prompt('양수를 입력하세요.', '정수입력');
+      if (num > 0) {
+        testResolve('양수를 입력하셨습니다.');
+      } else {
+        testReject('숫자를 잘못 입력하셨습니다. 다시 입력해주세요.');
+      }
+    });
+    //then 메서드 : promise 객체가 fulfilled 상태가 되면 실행할 콜백함수를 등록하는 메서드 입니다.
+    // Promise 결과 처리
+    testPromise.then(
+      function (value) { // 성공:값이 양수면 실행
+        output(value);
+      },
+      function (error) { // 실패:값이 음수면 실행
+        output(error);
+      }
+    );
+  </script>
+
+  <h3>실습2. setTimeOut을 이용한 비동기 처리하기 예제에서 promise객체 사용하기</h3>
+  <p>일반 함수 값 : <span style="color: #ff0000;" id="test01"></span></p>
+  <p>setTimeOut 값 : <span id="test02" style="color: #0000ff;"></span></p>
+</body>
+<script>
+  //setTimeout(test, 1000) //함수명 호출시 괄호 쓰면 안됨 test()
+  const t1 = document.getElementById('test01')
+  const t2 = document.getElementById('test02')
+  //일반 함수로 내용 출력
+  function output01() {
+    t1.textContent = '저는 일반 함수 입니다.';
+  }
+  const output02 = new Promise(function (testResolve, testReject) {
+    setTimeout(function () {
+      testResolve('저는 setTimeOut에서 실행되었습니다.');
+    }, 3000);
+  });
+  //함수 호출
+  output01();
+  output02.then(function (value) {
+    t2.textContent = value;
+  });
+  //실습 3. 
+
+  function starbucks(coffeename) {
+    const p = new Promise((resolve, reject) => {
+      if (coffeename === '아메리카노') {
+        resolve("아메리카노 한잔입니다.");
+      } else {
+        reject("해당 메뉴는 품절입니다.");
+      }
+    });
+    return p;
+  };
+  //출력하기
+  let coffee = prompt('커피입력');
+  starbucks(coffee).then((resolve) => console.log(resolve)).catch((reject) => console.log(reject)).finally(() => console.log('감사합니다.'));//주문성공 주문실패 주문완료
+</script>
+
+</html>

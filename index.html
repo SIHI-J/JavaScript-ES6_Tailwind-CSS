@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자바스크립트 es6 문법, tailwindcss</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body {
+      font-family: "맑은고딕", Arial, Helvetica, sans-serif;
+      font-size: 0.81rem;
+      /*절대단위 px을 상대단위 em으로 변환(요즘은 rem요소를 많이 씀)*/
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .top {
+      text-align: center;
+    }
+
+    #javascript .top {
+      background-color: #ffd755;
+    }
+
+    #tailwind .top {
+      background-color: #c3c7ff;
+    }
+
+    h1>img {
+      width: 130px;
+    }
+
+    h2 {
+      display: none;
+    }
+
+    dl {
+      margin: 18px 0px;
+      line-height: 40px;
+
+    }
+
+    dl>dt {
+      text-indent: 10px;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    #javascript dl>dt {
+      background-color: #ebad51;
+      color: #ffffff;
+    }
+
+    #tailwind dl>dt {
+      background-color: #6b75ce;
+      color: #ffffff;
+    }
+
+    dl>dd {
+      background-color: #eee;
+      border-bottom: 1px solid #ccc;
+      text-indent: 16px;
+    }
+
+    #javascript dl>dd {
+      background-color: #eee;
+      border-bottom: 1px solid #ccc;
+    }
+
+    dl>dd>a {
+      display: block;
+      transition: 0.5s;
+    }
+
+    #javascript dl>dd>a:hover {
+      background-color: #daa700;
+      color: #fff;
+    }
+
+    #tailwind dl>dd>a:hover {
+      background-color: #0f3a6b;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <section id="javascript">
+      <div class="top">
+        <h1><img src="images/es6.png" alt="자바스크립트 로고"></h1>
+      </div>
+      <h2>학습 목차</h2>
+      <dl>
+        <dt>1일차 - 자바스크립트es6 문법</dt>
+        <dd><a href="./1215_tailwind_es6/01_자바스크립트 es6 문법 소개.html" title="자바스크립트 소개와 기초문법">01_자바스크립트 es6 문법 소개</a></dd>
+        <dd><a href="./1215_tailwind_es6/02_자바스크립트 es6 문법_변수 키워드.html" title="02_자바스크립트 es6 문법_변수 키워드">02_자바스크립트 es6
+            문법_변수 키워드</a></dd>
+
+        <dd><a href="./1215_tailwind_es6/03_자바스크립트 화살표함수 실습예제.html" title="03_자바스크립트 화살표함수 실습예제">03_자바스크립트 화살표함수
+            실습예제</a></dd>
+        <dd><a href="./1215_tailwind_es6/화살표함수를활용한숫자증가_감소.html" title="화살표함수를활용한숫자증가_감소">화살표 함수를 활용한 숫자증가_감소</a></dd>
+        <dt>2일차 - 자바스크립트es6 문법 class문법, 비구조 할당방법</dt>
+        <dd><a href="./1216_tailwind_es6/04_자바스크립트 es6문법_class문법.html" title="04_자바스크립트 es6문법_class문법">04_자바스크립트
+            es6문법_class문법</a>
+        </dd>
+        <dd><a href="./1216_tailwind_es6/05_자바스크립트 es6문법_비구조화할당방법.html" title="05_자바스크립트 es6문법_비구조화할당방법">05_자바스크립트
+            es6문법_비구조화할당방법</a>
+        </dd>
+        <dd><a href="./1216_tailwind_es6/JDB사이트.html" title="JDB사이트실습">실습_JDB사이트</a></dd>
+        <dt>3일차 - 자바스크립트es6 문법 객체(배열, 시간)와 import/export 모듈화 </dt>
+        <dd><a href="./1217_tailwind_es6/es6문법_01_배열객체 스프레드 연산자.html" title="es6문법_01_배열객체 스프레드 연산자">es6문법_01_배열객체 스프레드
+            연산자</a></dd>
+        <dd><a href="./1217_tailwind_es6/es6문법_02_시간객체(setInterval_setTimeOut).html"
+            title="es6문법_02_시간객체(setInterval_setTimeOut)">es6문법_02_시간객체(setInterval_setTimeOut)</a></dd>
+        <dd><a href="./1217_tailwind_es6/es6문법_03_import_export모듈화sh.html"
+            title="es6문법_03_import_export모듈화">es6문법_03_import_export모듈화</a></dd>
+        <dd><a href="./1217_tailwind_es6/es6문법_04_동기와 비동기 처리방식.html" title="es6문법_04_동기와 비동기 처리방식">es6문법_04_동기와 비동기
+            처리방식</a>
+        </dd>
+        <dt>4일차 - 자바스크립트es6 문법 파일첨부, promise객체</dt>
+        <dd><a href="./1218_es6_react/es6문법_01_파일첨부리스트 구현하기sh.html" title="es6문법_01_파일첨부리스트 구현하기">es6문법_01_파일첨부리스트 구현하기
+            소개</a></dd>
+        <dd><a href="./1218_es6_react/es6문법_02_promise객체.html" title="es6문법_02_promise객체">es6문법_02_promise객체
+            소개</a></dd>
+      </dl>
+
+    </section>
+    <section id="tailwind">
+      <div class="top">
+        <h1><img src="images/mark.svg" alt="tailwind 로고"></h1>
+      </div>
+      <h2>학습 목차</h2>
+      <dl>
+        <dt>1일차 - tailwindcss소개와 작성법</dt>
+        <dd><a href="./1215_tailwind_es6/01_tailwindcss소개와 작성법.html" title="01_tailwindcss소개와 작성법">01_tailwindcss소개와
+            작성법</a></dd>
+        <dd><a href="./1215_tailwind_es6/02_tailwindcss를 활용한 배지 아이콘 제작하기.html"
+            title="02_tailwindcss를 활용한 배지 아이콘 제작하기">02_tailwindcss를 활용한 배지 아이콘 제작하기</a></dd>
+        <dd><a href="./1215_tailwind_es6/03_tailwindcss를 활용한 카드디자인 제작하기.html"
+            title="03_tailwindcss를 활용한 카드디자인 제작하기">03_tailwindcss를 활용한 카드디자인 제작하기</a></dd>
+        <dt>2일차 - tailwindcss_기본 유틸리티 클래스</dt>
+        <dd><a href="./1216_tailwind_es6/01_tailwindcss_기본 유틸리티 클래스.html"
+            title="01_tailwindcss_기본 유틸리티 클래스">01_tailwindcss_기본 유틸리티 클래스</a>
+        </dd>
+        <dd><a href="./1216_tailwind_es6/02_tailwindcss_반응형 그리드 레이아웃.html"
+            title="02_tailwindcss_반응형 그리드 레이아웃">02_tailwindcss_반응형 그리드 레이아웃</a>
+        </dd>
+        <dd><a href="./1216_tailwind_es6/JDB사이트.html" title="JDB사이트실습">실습_JDB사이트</a></dd>
+
+        <dt>3일차 - tailwind CSS 반응형 헤더 제작 </dt>
+        <dd><a href="./1217_tailwind_es6/02_response web_header.html" title="반응형 헤더 제작하기">반응형 헤더 제작하기</a></dd>
+      </dl>
+
+    </section>
+  </main>
+  <footer>
+
+  </footer>
+</body>
+
+</html>

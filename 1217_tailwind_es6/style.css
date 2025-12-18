@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", system-ui, sans-serif;
+}
+
+section {
+  min-height: 100vh;
+  padding: 40px 24px;
+  position: relative;
+  background: linear-gradient(rgb(201, 245, 200), rgba(65, 139, 87, 0.699));
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.container .top-right {
+  text-align: right;
+}
+.container .title {
+  text-align: right;
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 60px 0 70px;
+  color: #182c13;
+}
+
+form .grid {
+  display: flex;
+  gap: 24px;
+}
+form .left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+form .right {
+  flex: 1.1;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  background: rgba(70, 85, 75, 0.45);
+  border-radius: 6px;
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+}
+.box .label {
+  width: 70px;
+  font-weight: 700;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  flex-shrink: 0;
+}
+.box input,
+.box textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.95);
+}
+.box input::-moz-placeholder, .box textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.box input::placeholder,
+.box textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.box.textarea {
+  align-items: flex-start;
+  height: 210px;
+}
+.box.textarea textarea {
+  resize: none;
+  min-height: 170px;
+  line-height: 1.6;
+}
+
+.bottom {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.bottom .agree {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+.bottom input[type=checkbox] {
+  width: 18px;
+  height: 18px;
+  accent-color: rgb(5.2837837838, 6.8378378378, 4.6621621622);
+}
+.bottom .send {
+  margin-left: auto;
+  width: 520px;
+  max-width: 55%;
+  height: 64px;
+  border: none;
+  border-radius: 6px;
+  background: #11160f;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+.bottom .send:hover {
+  opacity: 0.9;
+}/*# sourceMappingURL=style.css.map */

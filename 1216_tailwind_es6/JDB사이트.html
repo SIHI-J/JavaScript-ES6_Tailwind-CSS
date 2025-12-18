@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02_tailwindcss_반응형 그리드 레이아웃</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    body * {
+      font-family: "맑은 고딕";
+    }
+  </style>
+</head>
+
+<body class="">
+  <h2>02_tailwindcss_반응형 그리드 레이아웃</h2>
+
+
+  <section class="max-w-full mx-14 px-4 py-10">
+    <h2 class="mb-8 text-8xl font-black ">ARTIST</h2>
+    <a href="https://jdbent.co.kr/" title="" class="mb-8 font-bold text-base border-b-2 pb-1 inline-block">전체</a>
+    <!-- 그리드 레이아웃 -->
+    <article class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-8">
+      <div class="bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition relative">
+        <img class="w-full object-cover hover:scale-105 transition duration-300" src="./images/jdb1.jpg" alt="">
+        <div class="w-full px-4 py-8 bottom-0 absolute bg-zinc-700/30 backdrop-blur">
+          <h2 class="text-white font-semibold text-lg">유민상</h2>
+          <p class="text-gray-200 text-sm">KBS 공채 20기 코미디언</p>
+          <a class="" href="#" title="프로필 상세보기"><img class="ml-auto block" src="./images/link_arrow.svg" alt=""></a>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition relative">
+        <img class="w-full object-cover hover:scale-105 transition duration-300" src="./images/jdb2.jpg" alt="">
+        <div class="w-full px-4 py-8 bottom-0 absolute bg-zinc-700/30 backdrop-blur">
+          <h2 class="text-white font-semibold text-lg">김지민</h2>
+          <p class="text-gray-200 text-sm">KBS 공채 21기 코미디언</p>
+          <a class="" href="#" title="프로필 상세보기"><img class="ml-auto block" src="./images/link_arrow.svg" alt=""></a>
+
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition relative">
+        <img class="w-full object-cover hover:scale-105 transition duration-300" src="./images/jdb3.jpg" alt="">
+        <div class="w-full px-4 py-8 bottom-0 absolute bg-zinc-700/30 backdrop-blur">
+          <h2 class="text-white font-semibold text-lg">홍인규</h2>
+          <p class="text-gray-200 text-sm">KBS 19기 공채 코미디언</p>
+          <a class="" href="#" title="프로필 상세보기"><img class="ml-auto block" src="./images/link_arrow.svg" alt=""></a>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition relative">
+        <img class="w-full object-cover hover:scale-105 transition duration-300" src="./images/jdb4.jpg" alt="">
+        <div class="w-full px-4 py-8 bottom-0 absolute bg-zinc-700/30 backdrop-blur">
+          <h2 class="text-white font-semibold text-lg">홍윤화</h2>
+          <p class="text-gray-200 text-sm">2006년 SBS 특채 코미디언</p>
+          <a class="" href="#" title="프로필 상세보기"><img class="ml-auto block" src="./images/link_arrow.svg" alt=""></a>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition relative">
+        <img class="w-full object-cover hover:scale-105 transition duration-300" src="./images/jdb5.jpg" alt="">
+        <div class="w-full px-4 py-8 bottom-0 absolute bg-zinc-700/30 backdrop-blur">
+          <h2 class="text-white font-semibold text-lg">김민경</h2>
+          <p class="text-gray-200 text-sm">KBS 공채 23기 코미디언</p>
+          <a class="" href="#" title="프로필 상세보기"><img class="ml-auto block" src="./images/link_arrow.svg" alt=""></a>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition relative">
+        <img class="w-full object-cover hover:scale-105 transition duration-300" src="./images/jdb6.jpg" alt="">
+        <div class="w-full px-4 py-8 bottom-0 absolute bg-zinc-700/30 backdrop-blur">
+          <h2 class="text-white font-semibold text-lg">김대희</h2>
+          <p class="text-gray-200 text-sm">KBS 공채 14기 코미디언</p>
+          <a class="" href="#" title="프로필 상세보기"><img class="ml-auto block" src="./images/link_arrow.svg" alt=""></a>
+
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition relative">
+        <img class="w-full object-cover hover:scale-105 transition duration-300" src="./images/jdb7.jpg" alt="">
+        <div class="w-full px-4 py-8 bottom-0 absolute bg-zinc-700/30 backdrop-blur">
+          <h2 class="text-white font-semibold text-lg">박소영</h2>
+          <p class="text-gray-200 text-sm">KBS 24기 공채 코미디언</p>
+          <a class="" href="#" title="프로필 상세보기"><img class="ml-auto block" src="./images/link_arrow.svg" alt=""></a>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition relative">
+        <img class="w-full object-cover hover:scale-105 transition duration-300" src="./images/jdb8.jpg" alt="">
+        <div class="w-full px-4 py-8 bottom-0 absolute bg-zinc-700/30 backdrop-blur">
+          <h2 class="text-white font-semibold text-lg">김준호</h2>
+          <p class="text-gray-200 text-sm">KBS 공채 5기 코미디언</p>
+          <a class="" href="#" title="프로필 상세보기"><img class="ml-auto block" src="./images/link_arrow.svg" alt=""></a>
+        </div>
+      </div>
+    </article>
+  </section>
+</body>
+
+</html>

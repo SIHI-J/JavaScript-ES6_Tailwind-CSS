@@ -1,0 +1,143 @@
+@charset "uft-8";
+$font-main: "Noto Sans KR", system-ui, sans-serif;
+$bg-glass: rgba(70, 85, 75, 0.45);
+$bg-dark: #11160f;
+$text-dark: #182c13;
+$text-white: rgba(255, 255, 255, 0.95);
+$text-muted: rgba(255, 255, 255, 0.6);
+$radius: 6px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-main;
+}
+
+section {
+  min-height: 100vh;
+  padding: 40px 24px;
+  position: relative;
+  background:
+    linear-gradient(rgb(201, 245, 200), rgba(65, 139, 87, 0.699))
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  .top-right {
+    text-align: right;
+  }
+
+  .title {
+    text-align: right;
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 60px 0 70px;
+    color: $text-dark;
+  }
+}
+
+form {
+  .grid {
+    display: flex;
+    gap: 24px;
+  }
+
+  .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .right {
+    flex: 1.1;
+  }
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  background: $bg-glass;
+  border-radius: $radius;
+  backdrop-filter: blur(12px);
+
+  .label {
+    width: 70px;
+    font-weight: 700;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    flex-shrink: 0;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 15px;
+    color: $text-white;
+
+    &::placeholder {
+      color: $text-muted;
+    }
+  }
+
+  &.textarea {
+    align-items: flex-start;
+    height: 210px;
+
+    textarea {
+      resize: none;
+      min-height: 170px;
+      line-height: 1.6;
+    }
+  }
+}
+
+.bottom {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  .agree {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: darken($bg-dark, 5%);
+  }
+
+  .send {
+    margin-left: auto;
+    width: 520px;
+    max-width: 55%;
+    height: 64px;
+    border: none;
+    border-radius: $radius;
+    background: $bg-dark;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

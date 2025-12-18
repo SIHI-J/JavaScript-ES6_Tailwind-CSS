@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03_tailwindcss를 활용한 카드디자인 제작하기</title>
+  <!-- tailwind css cdn 주소 연결하기 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css" type="text/css">
+  <script src="http://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <h2 class="font-extrabold text-xl">03_tailwindcss를 활용한 카드디자인 제작하기</h2>
+
+  <div class="bg-gray-100 items-center flex justify-center min-h-screen">
+    <!-- card component -->
+    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+      <img src="http://placehold.co/600x400" class="" alt="샘플이미지">
+      <!-- 내용 섹션-->
+      <div class="px-6 py-4">
+        <h3 class="font-bold text-xl mb-2 text-gray-800">카드 디자인 제목</h3>
+        <p class="text-gray-700 text-base">카드내용 <br> 카드내용</p>
+      </div>
+      <!--뱃지 아이콘-->
+      <div class="px-6 pt-4 pb-4">
+        <span
+          class="rounded-full text-sm inline-flex items-center px-3 py-1 bg-blue-200 text-blue-600 font-bold">#tailwindcss</span>
+        <span
+          class="rounded-full text-sm inline-flex items-center px-3 py-1 bg-green-200 text-green-700 font-bold">#webdev</span>
+        <span
+          class="rounded-full text-sm inline-flex items-center px-3 py-1 bg-violet-200 text-violet-600 font-bold">#css</span>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
